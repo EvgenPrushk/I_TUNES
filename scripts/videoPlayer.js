@@ -5,14 +5,29 @@ export const videoPlayerInit = () => {
   const videoProgress = document.querySelector(".video-progress");
   const videoTimePassed = document.querySelector(".video-time__passed");
   const videoTimeTotal = document.querySelector(".video-time__total");
+  const videoVolume = document.querySelector(".video-volume");
+  const videoFullscreen = document.querySelector(".video-fullscreen");
+
+  // videoFullscreen.addEventListener("click", () => {
+  //   console.log(videoPlayer);
+  //   videoPlayer.requestFullscreen();   
+  // });
+
+  // videoPlayer.addEventListener('fullscreenchange', () => {
+  //   if (document.fullscreen) {
+  //     videoPlayer.controls = true;
+  //   } else {
+  //     videoPlayer.controls = false;
+  //   }
+  // });
 
   const toggleIcon = () => {
     if (videoPlayer.paused) {
       videoButtonPlay.classList.remove("fa-pause");
       videoButtonPlay.classList.add("fa-play");
     } else {
-      videoButtonPlay.classList.remove("fa-play");
-      videoButtonPlay.classList.add("fa-pause");
+      videoButtonPlay.classList.remove("fa-pause");
+      videoButtonPlay.classList.add("fa-play");
     }
   };
 
